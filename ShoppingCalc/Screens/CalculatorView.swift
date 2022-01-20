@@ -9,24 +9,43 @@ import SwiftUI
 
 struct CalculatorView: View {
     var body: some View {
-        
-//        GeometryReader { geo in
+        NavigationView {
             VStack {
-                HStack {
-                    FullPriceView()
-//                        .frame(width: (geo.size.width / 2) - 10, height: 100)
-//                        .position(x: geo.size.width / 4, y: 50)
+                Spacer()
+                Spacer()
+                TotalAfterDiscountView()
+                    .padding(.bottom, 30)
+                
+                GeometryReader { _ in
+                HStack(alignment: .center) {
+                    DiscountView().padding(.leading, 40)
+                    
+                    Divider().frame(height: 90, alignment: .center)
+                        .padding(25)
 
-                    DiscountView()
-//                        .frame(width: (geo.size.width / 2) - 10, height: 100)
+                    FullPriceView()
 
                     }
-                Text("Hello")
-//        .frame(width: geo.size.width, height: 100)
+                }
+                
+                HStack {
+                    CalculateButton()
+                    }
+                }
+                Spacer()
+                    .padding(.bottom, 280)
+
             }
+           
+        .navigationTitle("Calculator")
+        .font(.system(.body, design: .monospaced))
+
         }
+        
     }
-//}
+
+
+
 
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {

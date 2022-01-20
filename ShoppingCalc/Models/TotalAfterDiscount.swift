@@ -10,5 +10,5 @@ import Foundation
 struct TotalAfterDiscount: Equatable {
     
     var title: String
-    var text: String
+    var totalAfterDiscountPrice: Double
 }

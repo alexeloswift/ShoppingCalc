@@ -11,21 +11,18 @@ struct DiscountView: View {
     
     @State private var discountPercentage = 20
     
-    let discountPercentages = 0..<101
+    let discountPercentages = 1..<101
     
     private var discount: Discount {
         Discount.init(title: "Discount")
     }
     
     var body: some View {
-        GeometryReader { geo in
-            
+        
             VStack(alignment: .center) {
-            
             Text(discount.title)
             
-            Divider()
-                .frame(width: 150)
+           
             
             HStack {
                 
@@ -37,15 +34,18 @@ struct DiscountView: View {
                 
                 Text("%")
             }
+            .padding(-3)
         }
+            .padding([.trailing, .leading])
+//            .padding(.top)
+//            .padding(.bottom)
         .font(.system(.body, design: .monospaced))
-        .frame(width: geo.size.width / 2, height: 100, alignment: .center)
-        }
         
     }
 }
 struct DiscountView_Previews: PreviewProvider {
     static var previews: some View {
         DiscountView()
+            .previewLayout(.sizeThatFits)
     }
 }

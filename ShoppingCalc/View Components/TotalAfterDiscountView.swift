@@ -1,34 +1,39 @@
 //
-//  FullPriceView.swift
+//  TotalAfterDiscountView.swift
 //  ShoppingCalc
 //
-//  Created by Alexis Diaz on 1/17/22.
+//  Created by Alexis Diaz on 1/18/22.
 //
 
 import SwiftUI
 
-struct FullPriceView: View {
+
+
+struct TotalAfterDiscountView: View {
     
-    @State private var price = ""
+//    var total: CalculateButton {
+//        totalAfterDiscount.
+//    }
+   
     
-    private var fullPrice: FullPrice {
-        FullPrice.init(title: "Full Price")
-    }
+    
+    
     
     var body: some View {
         
             VStack(alignment: .center) {
                 
-                Text(fullPrice.title)
+                Text("Total After Discount")
                 
-               
+                Divider()
+                    .frame(width: 150, alignment: .center)
                 
                 HStack {
                    
                         
                 Text("$")
                     
-                TextField("0.00", text: $price)
+                    Text ("\(total, specifier: "%. 2f") ")
                     .keyboardType(.decimalPad)
                     .accessibilityLabel("Full Price")
                     .multilineTextAlignment(.center)
@@ -36,14 +41,12 @@ struct FullPriceView: View {
                     }
                 }
                 .font(.system(.body, design: .monospaced))
-                .padding([.trailing])
             }
-        }
+}
 
-
-struct FullPriceView_Previews: PreviewProvider {
+struct TotalAfterDiscountView_Previews: PreviewProvider {
     static var previews: some View {
-        FullPriceView()
+        TotalAfterDiscountView()
             .previewLayout(.sizeThatFits)
     }
 }
