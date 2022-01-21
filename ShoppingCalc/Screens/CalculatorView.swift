@@ -8,41 +8,57 @@
 import SwiftUI
 
 struct CalculatorView: View {
+    
+    @State private var priceAfterDiscount: Double = 0.0
+    @State private var discountPercentage: Int = 50
+    @State var price: String = "0.00"
+    
+    
     var body: some View {
+        
         NavigationView {
+            
             VStack {
-                Spacer()
-                Spacer()
-                TotalAfterDiscountView()
-                    .padding(.bottom, 30)
                 
-                GeometryReader { _ in
-                HStack(alignment: .center) {
-                    DiscountView().padding(.leading, 40)
+                
+                
+                    
+
+                TotalAfterDiscountView(priceAfterDiscount: $priceAfterDiscount, discountPercentage: $discountPercentage, price: $price)
+                        .frame(width: 300, height: 100, alignment: .center)
+                GeometryReader { geo in
+                HStack {
+                    
+                    DiscountView(discountPercentage: $discountPercentage)
                     
                     Divider().frame(height: 90, alignment: .center)
                         .padding(25)
 
-                    FullPriceView()
+                    FullPriceView(price: $price)
+                        .keyboardType(.decimalPad)
 
                     }
+                .position(x: geo.size.width / 2,y: geo.size.height / 2)
+                .frame(width: geo.size.width, height: 100, alignment: .center)
+                
+
                 }
                 
+                GeometryReader { geo in
                 HStack {
-                    CalculateButton()
+                    
+                    ClearButton(priceAfterDiscount: $priceAfterDiscount, price: $price, discountPercentages: $discountPercentage)
+                        
+                    
+                    CalculateButton(priceAfterDiscount: $priceAfterDiscount, price: $price, calculateButtonPressed: true)
+                        }
+                .frame(width: geo.size.width, alignment: .center)
+                        }
                     }
                 }
-                Spacer()
-                    .padding(.bottom, 280)
-
             }
-           
-        .navigationTitle("Calculator")
-        .font(.system(.body, design: .monospaced))
-
         }
-        
-    }
+    
 
 
 

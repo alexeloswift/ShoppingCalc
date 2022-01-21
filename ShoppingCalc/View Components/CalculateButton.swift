@@ -8,33 +8,22 @@
 import SwiftUI
 
 
-
 struct CalculateButton: View {
     
-    @State private var salePercentage = 20
-    @State private var priceAfterDiscount = ""
-    
-    private var amountAfterDiscount: Double {
-        Double(priceAfterDiscount) ?? 0
-    }
-    
-    var totalAmount: Double {
+    @Binding var priceAfterDiscount: Double
+    @Binding var price: String
 
-        let priceTotal = Double(priceAfterDiscount)
-        let percentSelection = Double(salePercentage)
-    
-        let amountOff = priceTotal ?? 0 / 100 * percentSelection
-        let priceCalculated = priceTotal ?? 0 - amountOff
-
-        return priceCalculated
-    }
-        
-        var totalAfterDiscount: TotalAfterDiscount {
-            TotalAfterDiscount.init(title: "Total After Discount", totalAfterDiscountPrice: totalAmount)
-    }
+    @State var calculateButtonPressed = false
     
     var body: some View {
-        Button("calculate", action: presentCalculation)
+        
+        Button(action: {
+            performCalculation()
+            self.priceAfterDiscount = Double(price) ?? 0.00
+            
+        }, label: {
+            Text("calculate")
+        })
               .font(.title3)
               .padding(3)
               .foregroundColor(Color.blue)
@@ -44,20 +33,19 @@ struct CalculateButton: View {
         Capsule()
               .stroke(LinearGradient(gradient: Gradient(colors: [.init(red: 0.58, green: 0.25, blue: 0.7), .init(red: 0.6, green: 1, blue: 1)]), startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 3))
     }
-    
-    func calculation(calculate: Double) -> Double {
-        return totalAmount
-    }
-    
-    func presentCalculation() {
-        let _ = calculation(calculate: amountAfterDiscount)
-    }
-}
 
+
+    func performCalculation() {
+        calculateButtonPressed = true
+    }
+        
+      
+
+}
 
 struct CalculateButton_Previews: PreviewProvider {
     static var previews: some View {
-        CalculateButton()
+        CalculateButton(priceAfterDiscount: .constant(0.00), price: .constant("0.00"))
             .previewLayout(.sizeThatFits)
     }
 }

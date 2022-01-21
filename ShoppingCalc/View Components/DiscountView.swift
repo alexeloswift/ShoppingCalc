@@ -9,9 +9,10 @@ import SwiftUI
 
 struct DiscountView: View {
     
-    @State private var discountPercentage = 20
     
-    let discountPercentages = 1..<101
+    @Binding var discountPercentage: Int 
+    
+    let discountPercentages = 0..<101
     
     private var discount: Discount {
         Discount.init(title: "Discount")
@@ -45,7 +46,7 @@ struct DiscountView: View {
 }
 struct DiscountView_Previews: PreviewProvider {
     static var previews: some View {
-        DiscountView()
+        DiscountView(discountPercentage: .constant(50))
             .previewLayout(.sizeThatFits)
     }
 }

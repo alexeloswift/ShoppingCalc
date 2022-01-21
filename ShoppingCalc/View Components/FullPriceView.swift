@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FullPriceView: View {
     
-    @State private var price = ""
+    @Binding var price: String
     
     private var fullPrice: FullPrice {
         FullPrice.init(title: "Full Price")
@@ -20,8 +20,6 @@ struct FullPriceView: View {
             VStack(alignment: .center) {
                 
                 Text(fullPrice.title)
-                
-               
                 
                 HStack {
                    
@@ -43,7 +41,7 @@ struct FullPriceView: View {
 
 struct FullPriceView_Previews: PreviewProvider {
     static var previews: some View {
-        FullPriceView()
+        FullPriceView(price: .constant("0.00"))
             .previewLayout(.sizeThatFits)
     }
 }

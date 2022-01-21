@@ -11,11 +11,30 @@ import SwiftUI
 
 struct TotalAfterDiscountView: View {
     
-//    var total: CalculateButton {
-//        totalAfterDiscount.
-//    }
-   
+
     
+    @Binding var priceAfterDiscount: Double
+    @Binding var discountPercentage: Int
+    @Binding var price: String
+    
+    var amountAfterDiscount: Double {
+        Double(priceAfterDiscount)
+    }
+    
+    var totalAmount: Double {
+
+        let priceTotal = amountAfterDiscount
+        let percentSelection = Double(discountPercentage)
+    
+        let amountOff = priceTotal / 100 * percentSelection
+        let priceCalculated = priceTotal - amountOff
+
+        return priceCalculated
+    }
+    
+    var totalAfter: TotalAfterDiscount {
+        TotalAfterDiscount.init(title: "Total After Discount", totalAfterDiscountPrice: totalAmount)
+    }
     
     
     
@@ -23,7 +42,7 @@ struct TotalAfterDiscountView: View {
         
             VStack(alignment: .center) {
                 
-                Text("Total After Discount")
+                Text("\(totalAfter.title)")
                 
                 Divider()
                     .frame(width: 150, alignment: .center)
@@ -33,20 +52,22 @@ struct TotalAfterDiscountView: View {
                         
                 Text("$")
                     
-                    Text ("\(total, specifier: "%. 2f") ")
-                    .keyboardType(.decimalPad)
-                    .accessibilityLabel("Full Price")
-                    .multilineTextAlignment(.center)
-                    .frame(width: 100,alignment: .center)
+                        
+                    Text ("\(totalAfter.totalAfterDiscountPrice, specifier: "%. 2f") ")
+                        .keyboardType(.decimalPad)
+                        .accessibilityLabel("Full Price")
+                        .multilineTextAlignment(.center)
+                        .frame(width: 100,alignment: .center)
+                   
                     }
                 }
                 .font(.system(.body, design: .monospaced))
-            }
+    }
 }
 
 struct TotalAfterDiscountView_Previews: PreviewProvider {
     static var previews: some View {
-        TotalAfterDiscountView()
+        TotalAfterDiscountView(priceAfterDiscount: .constant(0.0), discountPercentage: .constant(50), price: .constant("0.00"))
             .previewLayout(.sizeThatFits)
     }
 }
