@@ -26,7 +26,7 @@ struct ClearButton: View {
           .padding(10)
           .overlay(
             Capsule()
-            .stroke(LinearGradient(gradient: Gradient(colors: [.init(red: 0.58, green: 0.25, blue: 0.7), .init(red: 0.6, green: 1, blue: 1)]), startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 3))
+                .stroke(Color.blue, lineWidth: 3))
     }
     
     func reset() {

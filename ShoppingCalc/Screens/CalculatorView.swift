@@ -19,13 +19,11 @@ struct CalculatorView: View {
         NavigationView {
             
             VStack {
-                
-                
-                
+                Spacer()
                     
-
                 TotalAfterDiscountView(priceAfterDiscount: $priceAfterDiscount, discountPercentage: $discountPercentage, price: $price)
                         .frame(width: 300, height: 100, alignment: .center)
+                
                 GeometryReader { geo in
                 HStack {
                     
@@ -37,24 +35,25 @@ struct CalculatorView: View {
                     FullPriceView(price: $price)
                         .keyboardType(.decimalPad)
 
-                    }
-                .position(x: geo.size.width / 2,y: geo.size.height / 2)
-                .frame(width: geo.size.width, height: 100, alignment: .center)
-                
-
+                        }
+                    .frame(width: geo.size.width, height: 100, alignment: .center)
                 }
                 
                 GeometryReader { geo in
-                HStack {
+                    HStack {
                     
                     ClearButton(priceAfterDiscount: $priceAfterDiscount, price: $price, discountPercentages: $discountPercentage)
                         
                     
                     CalculateButton(priceAfterDiscount: $priceAfterDiscount, price: $price, calculateButtonPressed: true)
-                        }
-                .frame(width: geo.size.width, alignment: .center)
+                            }
+                    .frame(width: geo.size.width, alignment: .center)
                         }
                     }
+            .navigationTitle("Calculator")
+            .padding(.top, 50)
+            .navigationBarTitleDisplayMode(.automatic)
+            
                 }
             }
         }

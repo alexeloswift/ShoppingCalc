@@ -9,7 +9,24 @@ import SwiftUI
 
 struct ListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationView{
+            ScrollView {
+                
+                List {
+                    Text("1")
+                    Text("2")
+                    Text("3")
+                }
+            
+            
+        
+       
+        
+            }
+            .navigationTitle("List")
+            .navigationBarTitleDisplayMode(.automatic)
+        }
     }
 }
 

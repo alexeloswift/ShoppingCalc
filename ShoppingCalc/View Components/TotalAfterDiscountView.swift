@@ -47,18 +47,14 @@ struct TotalAfterDiscountView: View {
                 Divider()
                     .frame(width: 150, alignment: .center)
                 
-                HStack {
-                   
-                        
-                Text("$")
-                    
-                        
-                    Text ("\(totalAfter.totalAfterDiscountPrice, specifier: "%. 2f") ")
+                GeometryReader { geo in
+             
+                    Text ("$\(totalAfter.totalAfterDiscountPrice, specifier: "%. 2f") ")
                         .keyboardType(.decimalPad)
                         .accessibilityLabel("Full Price")
                         .multilineTextAlignment(.center)
-                        .frame(width: 100,alignment: .center)
-                   
+                        .frame(width: geo.size.width,alignment: .center)
+    
                     }
                 }
                 .font(.system(.body, design: .monospaced))

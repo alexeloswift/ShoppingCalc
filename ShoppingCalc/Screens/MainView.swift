@@ -9,7 +9,16 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        CalculatorView()
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                           print("Button tapped")
+                       }, label: {
+                           Image(systemName: "arrowshape.turn.up.right.circle")
+                       })
+            }
+        }
     }
 }
 
