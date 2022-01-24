@@ -20,13 +20,13 @@ struct ClearButton: View {
     
     var body: some View {
         Button("clear", action: reset)
-        .font(.title3)
+          .font(.system(.body, design: .monospaced))
           .padding(3)
-          .foregroundColor(Color.blue)
+          .foregroundColor(.primary)
           .padding(10)
           .overlay(
             Capsule()
-                .stroke(Color.blue, lineWidth: 3))
+                .stroke(Color(UIColor.systemYellow).opacity(0.7), lineWidth: 3))
     }
     
     func reset() {

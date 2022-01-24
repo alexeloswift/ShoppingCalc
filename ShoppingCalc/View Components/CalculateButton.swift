@@ -21,18 +21,18 @@ struct CalculateButton: View {
             self.priceAfterDiscount = Double(price) ?? 0.00
         }, label: {
             Text("calculate")
+                .font(.system(.body, design: .monospaced))
+
         })
               .font(.title3)
               .padding(3)
-              .foregroundColor(Color.blue)
+              .foregroundColor(.primary)
               .padding(10)
         
               .overlay(
                 Capsule()
-                    .stroke(Color.blue, lineWidth: 3))
+                    .stroke(Color(UIColor.systemYellow).opacity(0.7), lineWidth: 3))
               
-            
-//              .stroke(LinearGradient(gradient: Gradient(colors: [.init(red: 0.58, green: 0.25, blue: 0.7), .init(red: 0.6, green: 1, blue: 1)]), startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 3))
     }
 }
 

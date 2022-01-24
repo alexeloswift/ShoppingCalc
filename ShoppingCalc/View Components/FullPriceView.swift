@@ -17,9 +17,10 @@ struct FullPriceView: View {
     
     var body: some View {
         
-            VStack(alignment: .center) {
+            VStack {
                 
                 Text(fullPrice.title)
+                    .padding(.leading)
                 
                 HStack {
                    
@@ -31,11 +32,20 @@ struct FullPriceView: View {
                     .accessibilityLabel("Full Price")
                     .multilineTextAlignment(.center)
                     .frame(width: 100,alignment: .center)
+                    .onTapGesture {
+                        reset()
                     }
+                
+                    
+                }
                 }
                 .font(.system(.body, design: .monospaced))
                 .padding([.trailing])
             }
+
+    func reset() {
+        self.price = ""
+    }
         }
 
 

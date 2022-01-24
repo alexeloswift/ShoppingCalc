@@ -38,8 +38,6 @@ struct DiscountView: View {
             .padding(-3)
         }
             .padding([.trailing, .leading])
-//            .padding(.top)
-//            .padding(.bottom)
         .font(.system(.body, design: .monospaced))
         
     }
