@@ -23,30 +23,27 @@ struct FullPriceView: View {
                     .padding(.leading)
                 
                 HStack {
-                   
+                    
+                    Text("$")
                         
-                Text("$")
-                    
-                TextField("0.00", text: $price)
-                    .keyboardType(.decimalPad)
-                    .accessibilityLabel("Full Price")
-                    .multilineTextAlignment(.center)
-                    .frame(width: 100,alignment: .center)
-                    .onTapGesture {
-                        reset()
+                    TextField("0.00", text: $price)
+                        .keyboardType(.decimalPad)
+                        .accessibilityLabel("Full Price")
+                        .multilineTextAlignment(.center)
+                        .frame(width: 100,alignment: .center)
+                        .onTapGesture {
+                            reset()
+                            }
+                        }
                     }
-                
-                    
+                    .font(.system(.body, design: .monospaced))
+                    .padding([.trailing])
                 }
-                }
-                .font(.system(.body, design: .monospaced))
-                .padding([.trailing])
-            }
 
     func reset() {
         self.price = ""
     }
-        }
+}
 
 
 struct FullPriceView_Previews: PreviewProvider {

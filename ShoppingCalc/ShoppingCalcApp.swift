@@ -14,7 +14,7 @@ struct ShoppingCalcApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView(discountPercentage: .constant(20), fullPrice: .constant(""), totalAfterDiscountPrice: .constant(0.0), taxPercentage: .constant(7), addToList: .constant(true))
                 .environmentObject(calculator)
         }
     }

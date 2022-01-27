@@ -7,12 +7,7 @@
 
 import SwiftUI
 
-struct AccentIcons: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .foregroundColor(Color(UIColor.systemYellow))
-    }
-}
+
 
 struct View1: View {
     var body: some View {
@@ -21,8 +16,13 @@ struct View1: View {
 }
 
 struct View2: View {
+    @Binding var discountPercentage: Int
+    @Binding var fullPrice: String
+    @Binding var totalAfterDiscountPrice: Double
+    @Binding var taxPercentage: Int
+    @Binding var addToList: Bool
     var body: some View {
-        ListView()
+        ListView(discountPercentage: $discountPercentage, fullPrice: $fullPrice, totalAfterDiscountPrice: $totalAfterDiscountPrice, taxPercentage: $taxPercentage, addToList: $addToList)
     }
 }
 
@@ -31,8 +31,13 @@ struct View2: View {
 struct MainView: View {
     
     @State var menuOpened = false
-
     
+    @Binding var discountPercentage: Int
+    @Binding var fullPrice: String
+    @Binding var totalAfterDiscountPrice: Double
+    @Binding var taxPercentage: Int
+    @Binding var addToList: Bool
+
     var body: some View {
         
         NavigationView {
@@ -44,7 +49,7 @@ struct MainView: View {
                         Label("Calculator", systemImage: "list.dash")
                     }
 
-                View2()
+                View2(discountPercentage: $discountPercentage, fullPrice: $fullPrice, totalAfterDiscountPrice: $totalAfterDiscountPrice, taxPercentage: $taxPercentage, addToList: $addToList)
                     .tabItem {
                         Label("List", systemImage: "square.and.pencil")
                     
@@ -62,17 +67,16 @@ struct MainView: View {
                ToolbarItem(placement: .navigationBarLeading) {
                    if !menuOpened {
                    Button(action: {
-                       self.menuOpened.toggle()
+                       withAnimation(.interactiveSpring(response: 0.66, dampingFraction: 0.5, blendDuration: 0.1)) {
+                           self.menuOpened.toggle()}
                    }, label: {
                           Image(systemName: "sidebar.leading").modifier(AccentIcons())
                       })
                    }
                }
            }
-           
-
-                }
-            }
+        }
+    }
     
     func toggleMenu() {
        menuOpened.toggle()
@@ -82,7 +86,7 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(discountPercentage: .constant(20), fullPrice: .constant(""), totalAfterDiscountPrice: .constant(0.0), taxPercentage: .constant(7), addToList: .constant(true))
             .preferredColorScheme(.dark)
             
     }

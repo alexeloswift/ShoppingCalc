@@ -69,7 +69,6 @@ struct SideMenu: View {
             }
             .background(Color.gray.opacity(0.15))
             .opacity(self.menuOpened ? 1 : 0)
-            .animation(.easeIn.delay(0.25), value: menuOpened)
             .onTapGesture {
                 self.toggleMenu()
             }
@@ -78,8 +77,7 @@ struct SideMenu: View {
                 SideBarContent()
                     .frame(width: width)
                     .offset(x: menuOpened ? 0 : -width)
-                    .animation(.default, value: menuOpened)
-                
+                    .scaleEffect(menuOpened ? 1 : 1)                
                 Spacer()
             }
         }

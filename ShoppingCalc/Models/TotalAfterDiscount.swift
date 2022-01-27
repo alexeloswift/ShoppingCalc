@@ -11,4 +11,5 @@ struct TotalAfterDiscount: Equatable {
     
     var title: String
     var totalAfterDiscountPrice: Double
+    
 }

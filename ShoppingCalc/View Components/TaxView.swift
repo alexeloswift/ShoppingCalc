@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-//let price: Int = 15 // $15
-//let priceDecimalNumber = NSDecimalNumber(integer: price)
-//
-//let taxPercentage = NSDecimalNumber(string: "0.09") // 9%
-//
-//let tax = priceDecimalNumber.multiplying(by: taxPercentage)
-//let taxDouble = tax.doubleValue // Retrieve the double value
-
 struct TaxView: View {
         
         @Binding var taxPercentage: Double
@@ -40,21 +32,18 @@ struct TaxView: View {
         
         let taxPercentages = 0..<101
         
-        
-        
         var body: some View {
             
-               
                 VStack {
+                    
                     Text("Tax")
                         .padding(.bottom, 3)
 
                     Text("$\(totalTaxAmount, specifier: "%. 2f") ")
-                }
-                .font(.system(.body, design: .monospaced))
-                
-    }
-}
+                    }
+            .font(.system(.body, design: .monospaced))
+            }
+        }
 
 struct TaxView_Previews: PreviewProvider {
     static var previews: some View {

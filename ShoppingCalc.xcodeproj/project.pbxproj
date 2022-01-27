@@ -31,6 +31,7 @@
 		FDE73E1C279748FA00386DD4 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73E1B279748FA00386DD4 /* Discount.swift */; };
 		FDE73E1E2797490A00386DD4 /* TotalAfterDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73E1D2797490A00386DD4 /* TotalAfterDiscount.swift */; };
 		FDE73E202797CFB700386DD4 /* TotalAfterDiscountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73E1F2797CFB700386DD4 /* TotalAfterDiscountView.swift */; };
+		FDEEB793279FD1880038350A /* AccentIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEEB792279FD1880038350A /* AccentIcons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		FDE73E1B279748FA00386DD4 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 		FDE73E1D2797490A00386DD4 /* TotalAfterDiscount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAfterDiscount.swift; sourceTree = "<group>"; };
 		FDE73E1F2797CFB700386DD4 /* TotalAfterDiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAfterDiscountView.swift; sourceTree = "<group>"; };
+		FDEEB792279FD1880038350A /* AccentIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentIcons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				FDC0CF2E279E5D230067B276 /* NewTotalViewMod.swift */,
 				FDC0CF30279E5D680067B276 /* SmallViewsMod.swift */,
 				FDC0CF32279E5DF70067B276 /* TotalViewMod.swift */,
+				FDEEB792279FD1880038350A /* AccentIcons.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				FDE73E132796790600386DD4 /* ListView.swift in Sources */,
 				FDE73E0F279678BF00386DD4 /* FullPriceView.swift in Sources */,
 				FDE73E1A279748C800386DD4 /* FullPrice.swift in Sources */,
+				FDEEB793279FD1880038350A /* AccentIcons.swift in Sources */,
 				FD396B63279930CC0095FB3D /* ClearButton.swift in Sources */,
 				FDC0CF2C279E50880067B276 /* NewTotalView.swift in Sources */,
 				FD396B612799309C0095FB3D /* CalculateButton.swift in Sources */,

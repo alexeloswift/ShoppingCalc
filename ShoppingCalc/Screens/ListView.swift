@@ -7,18 +7,17 @@
 
 import SwiftUI
 
-class Calculator: ObservableObject {
-    @Published var items = [Calculator]()
-    
-}
-
 struct ListView: View {
     
-    @State private var title = ""
-    @State private var fullPrice = ""
-    @State private var totalAfterDiscountPRice = 0.0
-    @State private var taxPercentage = 7
-    @State private var discountPercentage = 20
+    @State private var description = ""
+    
+    @Binding var discountPercentage: Int
+    @Binding var fullPrice: String
+    @Binding var totalAfterDiscountPrice: Double
+    @Binding var taxPercentage: Int
+    @Binding var addToList: Bool
+    
+    
     
     var body: some View {
         
@@ -26,7 +25,10 @@ struct ListView: View {
             ZStack {
                 Color(UIColor.systemGray6)
                     VStack {
-                        Text("hello")
+                        Text("")
+                        Text("Discount Percentage: \(discountPercentage)%")
+                        Text("Tax Percentage: \(taxPercentage)%")
+                        Text("Full Price: $\(fullPrice)")
                     }
                 }
             
@@ -42,6 +44,6 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView()
+        ListView(discountPercentage: .constant(20), fullPrice: .constant(""), totalAfterDiscountPrice: .constant(0.0), taxPercentage: .constant(7), addToList: .constant(true))
     }
 }

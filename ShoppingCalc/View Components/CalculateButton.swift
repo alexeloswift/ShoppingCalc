@@ -22,19 +22,16 @@ struct CalculateButton: View {
         }, label: {
             Text("calculate")
                 .font(.system(.body, design: .monospaced))
-
         })
               .font(.title3)
               .padding(3)
               .foregroundColor(.primary)
               .padding(10)
-        
               .overlay(
                 Capsule()
                     .stroke(Color(UIColor.systemYellow).opacity(0.7), lineWidth: 3))
-              
+        }
     }
-}
 
 struct CalculateButton_Previews: PreviewProvider {
     static var previews: some View {

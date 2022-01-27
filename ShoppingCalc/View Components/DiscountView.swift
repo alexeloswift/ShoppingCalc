@@ -9,7 +9,6 @@ import SwiftUI
 
 struct DiscountView: View {
     
-    
     @Binding var discountPercentage: Int 
     
     let discountPercentages = 0..<101
@@ -20,10 +19,9 @@ struct DiscountView: View {
     
     var body: some View {
         
-            VStack(alignment: .center) {
-            Text(discount.title)
+        VStack(alignment: .center) {
             
-           
+            Text(discount.title)
             
             HStack {
                 
@@ -38,8 +36,7 @@ struct DiscountView: View {
             .padding(-3)
         }
             .padding([.trailing, .leading])
-        .font(.system(.body, design: .monospaced))
-        
+            .font(.system(.body, design: .monospaced))
     }
 }
 struct DiscountView_Previews: PreviewProvider {

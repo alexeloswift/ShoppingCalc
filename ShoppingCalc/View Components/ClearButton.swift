@@ -16,9 +16,8 @@ struct ClearButton: View {
     @Binding var price: String
     @Binding var discountPercentages: Int
     
-    
-    
     var body: some View {
+        
         Button("clear", action: reset)
           .font(.system(.body, design: .monospaced))
           .padding(3)
@@ -27,7 +26,7 @@ struct ClearButton: View {
           .overlay(
             Capsule()
                 .stroke(Color(UIColor.systemYellow).opacity(0.7), lineWidth: 3))
-    }
+        }
     
     func reset() {
         self.price = ""
