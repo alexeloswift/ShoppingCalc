@@ -11,7 +11,7 @@ class Calculator: ObservableObject {
     @Published var items = [Calculator]()
 }
 
-struct CalculatorView: View {
+struct CalcView: View {
     
     @State private var priceAfterDiscount: Double = 0.0
     @State private var discountPercentage: Int = 50
@@ -102,17 +102,11 @@ func addItemsToList() {
     }
 }
 
-#if canImport(UIKit)
-extension View {
-    func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
-#endif
+
     
-struct CalculatorView_Previews: PreviewProvider {
+struct CalcView_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorView()
+        CalcView()
             .preferredColorScheme(.dark)
     }
 }

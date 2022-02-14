@@ -10,11 +10,15 @@ import SwiftUI
 struct SmallViewsMod: ViewModifier {
     func body(content: Content) -> some View {
         content
+            .font(.system(.body, design: .monospaced))
             .foregroundColor(.primary)
             .frame(width: 150, height: 80, alignment: .center)
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: 17)
                     .stroke(Color(UIColor.systemGray4), lineWidth: 3))
+                    .background(.ultraThinMaterial)
+
                     .padding(.horizontal, -25)
+
             }
         }

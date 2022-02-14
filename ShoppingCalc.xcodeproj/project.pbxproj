@@ -12,6 +12,8 @@
 		FD396B612799309C0095FB3D /* CalculateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD396B602799309C0095FB3D /* CalculateButton.swift */; };
 		FD396B63279930CC0095FB3D /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD396B62279930CC0095FB3D /* ClearButton.swift */; };
 		FDB411BE279B2A5B00EA6D27 /* TaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB411BD279B2A5B00EA6D27 /* TaxView.swift */; };
+		FDB6D78A27B0DEEE00A16A87 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB6D78927B0DEEE00A16A87 /* CalculatorView.swift */; };
+		FDB6D78C27B0E0AC00A16A87 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB6D78B27B0E0AC00A16A87 /* CalculatorViewModel.swift */; };
 		FDC0CF28279E0EF70067B276 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0CF27279E0EF70067B276 /* List.swift */; };
 		FDC0CF2A279E1C080067B276 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0CF29279E1C080067B276 /* ListItem.swift */; };
 		FDC0CF2C279E50880067B276 /* NewTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0CF2B279E50880067B276 /* NewTotalView.swift */; };
@@ -26,7 +28,7 @@
 		FDE73E11279678E600386DD4 /* DiscountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73E10279678E600386DD4 /* DiscountView.swift */; };
 		FDE73E132796790600386DD4 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73E122796790600386DD4 /* ListView.swift */; };
 		FDE73E152796793500386DD4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73E142796793500386DD4 /* MainView.swift */; };
-		FDE73E172796795E00386DD4 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73E162796795E00386DD4 /* CalculatorView.swift */; };
+		FDE73E172796795E00386DD4 /* CalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73E162796795E00386DD4 /* CalcView.swift */; };
 		FDE73E1A279748C800386DD4 /* FullPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73E19279748C800386DD4 /* FullPrice.swift */; };
 		FDE73E1C279748FA00386DD4 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73E1B279748FA00386DD4 /* Discount.swift */; };
 		FDE73E1E2797490A00386DD4 /* TotalAfterDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE73E1D2797490A00386DD4 /* TotalAfterDiscount.swift */; };
@@ -40,6 +42,8 @@
 		FD396B602799309C0095FB3D /* CalculateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateButton.swift; sourceTree = "<group>"; };
 		FD396B62279930CC0095FB3D /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		FDB411BD279B2A5B00EA6D27 /* TaxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxView.swift; sourceTree = "<group>"; };
+		FDB6D78927B0DEEE00A16A87 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		FDB6D78B27B0E0AC00A16A87 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		FDC0CF27279E0EF70067B276 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		FDC0CF29279E1C080067B276 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		FDC0CF2B279E50880067B276 /* NewTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTotalView.swift; sourceTree = "<group>"; };
@@ -55,7 +59,7 @@
 		FDE73E10279678E600386DD4 /* DiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountView.swift; sourceTree = "<group>"; };
 		FDE73E122796790600386DD4 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		FDE73E142796793500386DD4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		FDE73E162796795E00386DD4 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		FDE73E162796795E00386DD4 /* CalcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcView.swift; sourceTree = "<group>"; };
 		FDE73E19279748C800386DD4 /* FullPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPrice.swift; sourceTree = "<group>"; };
 		FDE73E1B279748FA00386DD4 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 		FDE73E1D2797490A00386DD4 /* TotalAfterDiscount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAfterDiscount.swift; sourceTree = "<group>"; };
@@ -80,6 +84,27 @@
 				FD274A83279D103000A03D02 /* SideBarContent.swift */,
 			);
 			path = SideBar;
+			sourceTree = "<group>";
+		};
+		FDB6D78427B0DE8300A16A87 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				FDB6D78927B0DEEE00A16A87 /* CalculatorView.swift */,
+				FDB6D78B27B0E0AC00A16A87 /* CalculatorViewModel.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		FDB6D78F27B0E0D700A16A87 /* Old App */ = {
+			isa = PBXGroup;
+			children = (
+				FDE73E0C2796783200386DD4 /* Screens */,
+				FD274A80279D0F5A00A03D02 /* SideBar */,
+				FDE73E0D2796784200386DD4 /* View Components */,
+				FDE73E182797488D00386DD4 /* Models */,
+				FDC0CF2D279E5CE40067B276 /* ViewModifiers */,
+			);
+			path = "Old App";
 			sourceTree = "<group>";
 		};
 		FDC0CF2D279E5CE40067B276 /* ViewModifiers */ = {
@@ -113,11 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				FDE73DE02795353700386DD4 /* ShoppingCalcApp.swift */,
-				FDC0CF2D279E5CE40067B276 /* ViewModifiers */,
-				FDE73E182797488D00386DD4 /* Models */,
-				FDE73E0D2796784200386DD4 /* View Components */,
-				FD274A80279D0F5A00A03D02 /* SideBar */,
-				FDE73E0C2796783200386DD4 /* Screens */,
+				FDB6D78427B0DE8300A16A87 /* MVVM */,
+				FDB6D78F27B0E0D700A16A87 /* Old App */,
 				FDE73DE42795353800386DD4 /* Assets.xcassets */,
 			);
 			path = ShoppingCalc;
@@ -127,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				FDE73E142796793500386DD4 /* MainView.swift */,
-				FDE73E162796795E00386DD4 /* CalculatorView.swift */,
+				FDE73E162796795E00386DD4 /* CalcView.swift */,
 				FDE73E122796790600386DD4 /* ListView.swift */,
 				FDC0CF34279E75810067B276 /* SettingsView.swift */,
 				FDC0CF36279E75970067B276 /* HistoryView.swift */,
@@ -251,11 +273,13 @@
 				FDE73E1A279748C800386DD4 /* FullPrice.swift in Sources */,
 				FDEEB793279FD1880038350A /* AccentIcons.swift in Sources */,
 				FD396B63279930CC0095FB3D /* ClearButton.swift in Sources */,
+				FDB6D78C27B0E0AC00A16A87 /* CalculatorViewModel.swift in Sources */,
 				FDC0CF2C279E50880067B276 /* NewTotalView.swift in Sources */,
 				FD396B612799309C0095FB3D /* CalculateButton.swift in Sources */,
-				FDE73E172796795E00386DD4 /* CalculatorView.swift in Sources */,
+				FDE73E172796795E00386DD4 /* CalcView.swift in Sources */,
 				FDE73E1E2797490A00386DD4 /* TotalAfterDiscount.swift in Sources */,
 				FDC0CF28279E0EF70067B276 /* List.swift in Sources */,
+				FDB6D78A27B0DEEE00A16A87 /* CalculatorView.swift in Sources */,
 				FDE73DE12795353700386DD4 /* ShoppingCalcApp.swift in Sources */,
 				FDC0CF2A279E1C080067B276 /* ListItem.swift in Sources */,
 				FDC0CF35279E75810067B276 /* SettingsView.swift in Sources */,
