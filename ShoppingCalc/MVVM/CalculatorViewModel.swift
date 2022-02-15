@@ -10,7 +10,7 @@ import SwiftUI
 class CalculatorViewModel: ObservableObject {
     
 //    Input
-    @Published var discountPercentage: Int = 50
+    @Published var discountPercentage: Int = 20
     @Published var price: String = "0.00"
     @Published var taxPercentage: Double = 0.07
     
