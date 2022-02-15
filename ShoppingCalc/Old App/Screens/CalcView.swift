@@ -32,11 +32,11 @@ struct CalcView: View {
                 
                 
                 TotalAfterDiscountView(priceAfterDiscount: $priceAfterDiscount, discountPercentage: $discountPercentage, price: $price, taxPercentage: $taxPercentage)
-                        .modifier(TotalViewMod())
+                        .modifier(NewTotalViewMod())
                         .padding()
                     
                 NewTotalView(taxPercentage: $taxPercentage, priceAfterDiscount: $priceAfterDiscount, discountPercentage: $discountPercentage, price: $price)
-                        .modifier(NewTotalViewMod())
+                        .modifier(NewTotalWithTaxViewMod())
                         
                     
                     HStack {

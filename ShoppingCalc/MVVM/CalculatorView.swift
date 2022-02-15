@@ -21,19 +21,17 @@ struct CalculatorView: View {
                 LinearGradient(colors: [Color.pink, Color.indigo], startPoint: .topLeading, endPoint: .bottomTrailing)
                     .ignoresSafeArea()
              
-                    
-                
             GeometryReader { geo in
                 ScrollView {
                     VStack {
+                        
                         VStack {
                             VStack {
                                 Text("New Total")
                                 Text ("\(viewmodel.priceAfterDiscount, specifier: "%. 2f")")
                                         .accessibilityLabel("Full Price")
-                                        .multilineTextAlignment(.center)
-                                        .padding(0.5)
-                                        .padding(.bottom, 10)
+                                        .padding(1)
+                                
                             }
                             
                             Divider().frame(width: 200)
@@ -42,29 +40,27 @@ struct CalculatorView: View {
                                 Text("Taxes")
                             
                                 Text("\(viewmodel.taxesAmountAfterDiscount, specifier: "%. 2f")")
-                                    .padding(0.5)
-                            }
-                        }
-                        .modifier(TotalViewMod())
-                        .padding()
+                                    .padding(1)
+                                    }
+                                }
+                                .modifier(NewTotalViewMod())
+                                .padding()
 
                         VStack {
                             Text("New Total With Taxes")
                             Text("\(viewmodel.priceAfterDiscountWithTax, specifier: "%. 2f")")
                                 .padding(1)
                         }
-                            .modifier(NewTotalViewMod())
+                            .modifier(NewTotalWithTaxViewMod())
 
                         
                         HStack {
-                            
-                        Picker("Discount Percentage", selection: $viewmodel.discountPercentage) {
-                            ForEach(discountPercentages) {
-                                    Text("\($0)")
-                            }}
-                        .tint(Color(UIColor.systemYellow).opacity(0.7))
+                            Picker("Discount Percentage", selection: $viewmodel.discountPercentage) {
+                                ForEach(discountPercentages) {
+                                        Text("\($0)")
+                                }}
                             .modifier(SmallViewsMod())
-                            .padding(.trailing, 50)
+                        
                             
                             TextField(viewmodel.price, text: $viewmodel.price)
                                 .keyboardType(.decimalPad)
@@ -74,12 +70,13 @@ struct CalculatorView: View {
                                 .onTapGesture {
                                     viewmodel.reset()
                                     }
-                                
-                        }
-                        .frame(width: geo.size.width, height: 100, alignment: .center)
+                                }
+                                .frame(width: geo.size.width, height: 100, alignment: .center)
                         
+                        Spacer()
+                            .padding()
                         
-                        VStack {
+                        HStack {
                             Button("clear", action: viewmodel.reset)
                                 .font(.system(.body, design: .monospaced))
                                 .font(.title3)
