@@ -55,14 +55,18 @@ struct CalculatorView: View {
 
                         
                         HStack {
+                            VStack{
+                            Text("Disount")
                             Picker("Discount Percentage", selection: $viewmodel.discountPercentage) {
                                 ForEach(discountPercentages) {
-                                        Text("\($0)")
+                                        Text("\($0) %")
                                 }}
+                            }
                             .modifier(SmallViewsMod())
-                        
-                            
+                            VStack{
+                            Text("Full Price")
                             TextField(viewmodel.price, text: $viewmodel.price)
+                            }
                                 .keyboardType(.decimalPad)
                                 .accessibilityLabel("Full Price")
                                 .multilineTextAlignment(.center)
@@ -85,7 +89,8 @@ struct CalculatorView: View {
                                 .padding(10)
                                 .overlay(
                                   Capsule()
-                                      .stroke(Color(UIColor.systemYellow).opacity(0.7), lineWidth: 3))
+                                      .stroke(Color(UIColor.systemGray4), lineWidth: 3))
+                            
                             Button("calculate", action: viewmodel.presentCalculation)
                                 .font(.system(.body, design: .monospaced))
                                 .font(.title3)
@@ -94,7 +99,7 @@ struct CalculatorView: View {
                                 .padding(10)
                                 .overlay(
                                   Capsule()
-                                      .stroke(Color(UIColor.systemYellow).opacity(0.7), lineWidth: 3))
+                                      .stroke(Color(UIColor.systemGray4), lineWidth: 3))
                             }
                         }
                     }

@@ -9,9 +9,25 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        CalculatorView()
-    }
-}
+        
+        NavigationView {
+                   ZStack {
+                       TabView {
+                           CalculatorView()
+                               .tabItem {
+                                   Label("Calculator", systemImage: "list.dash")
+                               }
+
+                           ListView()
+                               .tabItem {
+                                   Label("List", systemImage: "square.and.pencil")
+                               
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

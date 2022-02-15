@@ -12,7 +12,7 @@ struct ShoppingCalcApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CalculatorView()
+            MainView()
                 
         }
     }
