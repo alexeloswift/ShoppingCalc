@@ -69,4 +69,7 @@ class CalculatorViewModel: ObservableObject {
         priceAfterDiscountWithTax = 0.0
         taxesAmountAfterDiscount = 0.0
     }
+    
+   
+    
 }

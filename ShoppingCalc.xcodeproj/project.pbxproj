@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD20196F27BB6A7D00B2D693 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD20196E27BB6A7D00B2D693 /* MainView.swift */; };
+		FD20197427BB731C00B2D693 /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD20197327BB731C00B2D693 /* HideKeyboard.swift */; };
 		FDB6D78A27B0DEEE00A16A87 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB6D78927B0DEEE00A16A87 /* CalculatorView.swift */; };
 		FDB6D78C27B0E0AC00A16A87 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB6D78B27B0E0AC00A16A87 /* CalculatorViewModel.swift */; };
 		FDC0CF2F279E5D230067B276 /* NewTotalWithTaxViewMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0CF2E279E5D230067B276 /* NewTotalWithTaxViewMod.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		FD20196E27BB6A7D00B2D693 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FD20197327BB731C00B2D693 /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		FDB6D78927B0DEEE00A16A87 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		FDB6D78B27B0E0AC00A16A87 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		FDC0CF2E279E5D230067B276 /* NewTotalWithTaxViewMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTotalWithTaxViewMod.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD20197227BB728900B2D693 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD20197327BB731C00B2D693 /* HideKeyboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FDB6D78427B0DE8300A16A87 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
@@ -49,6 +59,7 @@
 				FDB6D78B27B0E0AC00A16A87 /* CalculatorViewModel.swift */,
 				FD20196E27BB6A7D00B2D693 /* MainView.swift */,
 				FDC0CF2D279E5CE40067B276 /* ViewModifiers */,
+				FD20197227BB728900B2D693 /* Extensions */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -163,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD20197427BB731C00B2D693 /* HideKeyboard.swift in Sources */,
 				FDC0CF31279E5D680067B276 /* SmallViewsMod.swift in Sources */,
 				FDC0CF2F279E5D230067B276 /* NewTotalWithTaxViewMod.swift in Sources */,
 				FDC0CF33279E5DF70067B276 /* NewTotalViewMod.swift in Sources */,
