@@ -16,6 +16,6 @@ struct SmallViewsMod: ViewModifier {
             .overlay(
                 RoundedRectangle(cornerRadius: 17)
                     .stroke(Color(UIColor.systemGray4), lineWidth: 3))
-
-            }
-        }
+        
+    }
+}

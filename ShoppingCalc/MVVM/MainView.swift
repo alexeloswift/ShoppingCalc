@@ -11,23 +11,23 @@ struct MainView: View {
     var body: some View {
         
         NavigationView {
-                   ZStack {
-                       TabView {
-                           CalculatorView()
-                               .tabItem {
-                                   Label("Calculator", systemImage: "list.dash")
-                               }
-
-                           ListView()
-                               .tabItem {
-                                   Label("List", systemImage: "square.and.pencil")
-                               
-                                }
-                            }
+            ZStack {
+                TabView {
+                    CalculatorView()
+                        .tabItem {
+                            Label("Calculator", systemImage: "list.dash")
                         }
-                    }
+                    
+                    ListView()
+                        .tabItem {
+                            Label("List", systemImage: "square.and.pencil")
+                            
+                        }
                 }
             }
+        }
+    }
+}
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

@@ -9,21 +9,21 @@ import SwiftUI
 
 class CalculatorViewModel: ObservableObject {
     
-//    Input
+    //    Input
     @Published var discountPercentage: Int = 50
     @Published var price: String = "0.00"
     @Published var taxPercentage: Double = 0.07
     
-//    Output
+    //    Output
     @Published var priceAfterDiscountWithTax: Double = 0.0
     @Published var priceAfterDiscount: Double = 0.0
     @Published var taxesAmountAfterDiscount: Double = 0.0
-
+    
     
     func calculateNewTotal(price: String, discountPercentage: Int) -> Double {
         
         let priceAsDouble = Double(price) ?? 0.0
-        let discountPercentageAsDouble = Double(discountPercentage) 
+        let discountPercentageAsDouble = Double(discountPercentage)
         
         let amountOff = priceAsDouble / 100 * discountPercentageAsDouble
         let priceCalculatedWithoutTax = priceAsDouble - amountOff

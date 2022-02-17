@@ -12,6 +12,7 @@
 		FD20197827BB7B5700B2D693 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD20197727BB7B5700B2D693 /* ListViewModel.swift */; };
 		FD20197C27BB7BB000B2D693 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD20197B27BB7BB000B2D693 /* SettingsView.swift */; };
 		FD20197F27BB7EC100B2D693 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD20197E27BB7EC100B2D693 /* ListModel.swift */; };
+		FD7ABA4C27BE198F00DA5030 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7ABA4B27BE198F00DA5030 /* PersistenceController.swift */; };
 		FDB6D78A27B0DEEE00A16A87 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB6D78927B0DEEE00A16A87 /* CalculatorView.swift */; };
 		FDB6D78C27B0E0AC00A16A87 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB6D78B27B0E0AC00A16A87 /* CalculatorViewModel.swift */; };
 		FDC0CF2F279E5D230067B276 /* NewTotalWithTaxViewMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC0CF2E279E5D230067B276 /* NewTotalWithTaxViewMod.swift */; };
@@ -28,6 +29,7 @@
 		FD20197727BB7B5700B2D693 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		FD20197B27BB7BB000B2D693 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FD20197E27BB7EC100B2D693 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		FD7ABA4B27BE198F00DA5030 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		FDB6D78927B0DEEE00A16A87 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		FDB6D78B27B0E0AC00A16A87 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		FDC0CF2E279E5D230067B276 /* NewTotalWithTaxViewMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTotalWithTaxViewMod.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				FDE73DE02795353700386DD4 /* ShoppingCalcApp.swift */,
+				FD7ABA4B27BE198F00DA5030 /* PersistenceController.swift */,
 				FDB6D78427B0DE8300A16A87 /* MVVM */,
 				FDE73DE42795353800386DD4 /* Assets.xcassets */,
 			);
@@ -209,6 +212,7 @@
 				FD20196F27BB6A7D00B2D693 /* MainView.swift in Sources */,
 				FDB6D78A27B0DEEE00A16A87 /* CalculatorView.swift in Sources */,
 				FDE73DE12795353700386DD4 /* ShoppingCalcApp.swift in Sources */,
+				FD7ABA4C27BE198F00DA5030 /* PersistenceController.swift in Sources */,
 				FD20197627BB7B3B00B2D693 /* ListView.swift in Sources */,
 				FD20197C27BB7BB000B2D693 /* SettingsView.swift in Sources */,
 			);
