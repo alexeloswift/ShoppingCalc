@@ -24,25 +24,10 @@ struct MainView: View {
                             Label("List", systemImage: "square.and.pencil")
                         }
                     }
+                }
             }
-
-                
-//                .toolbar {
-//                    ToolbarItem(placement: .navigationBarLeading) {
-//                        Button(action: {
-//                            withAnimation(.interactiveSpring(response: 0.66, dampingFraction: 0.5, blendDuration: 0.1)) {
-//                                //                                           self.menuOpened.toggle()
-//
-//                            }
-//                        }, label: {
-//                            Image(systemName: "sidebar.leading").modifier(AccentIcons())
-//                        })
-//                    }
-//                }
-            
         }
     }
-}
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

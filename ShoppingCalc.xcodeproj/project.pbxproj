@@ -120,6 +120,15 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		FD48BCD327CA0EEA00DB85BE /* CoreLocation */ = {
+			isa = PBXGroup;
+			children = (
+				FDD5BAF527C35F3D0061D7E8 /* LocationFetcher.swift */,
+				FDD5BAF727C35F710061D7E8 /* LocationFetcherView.swift */,
+			);
+			path = CoreLocation;
+			sourceTree = "<group>";
+		};
 		FDC0CF2D279E5CE40067B276 /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,15 +159,6 @@
 			);
 			name = History;
 			path = MVVM;
-			sourceTree = "<group>";
-		};
-		FDD5BAF927C366C30061D7E8 /* Location */ = {
-			isa = PBXGroup;
-			children = (
-				FDD5BAF527C35F3D0061D7E8 /* LocationFetcher.swift */,
-				FDD5BAF727C35F710061D7E8 /* LocationFetcherView.swift */,
-			);
-			path = Location;
 			sourceTree = "<group>";
 		};
 		FDD5BAFA27C367010061D7E8 /* CoreData */ = {
@@ -193,8 +193,8 @@
 				FDAFF70D27C45F2B00C1C65E /* LaunchScreen.storyboard */,
 				FDE73DE02795353700386DD4 /* ShoppingCalcApp.swift */,
 				FD20196E27BB6A7D00B2D693 /* MainView.swift */,
+				FD48BCD327CA0EEA00DB85BE /* CoreLocation */,
 				FDD5BAFA27C367010061D7E8 /* CoreData */,
-				FDD5BAF927C366C30061D7E8 /* Location */,
 				FD20197A27BB7B7200B2D693 /* Calculator */,
 				FD20197927BB7B6000B2D693 /* List */,
 				FDD5BAF027C304580061D7E8 /* History */,

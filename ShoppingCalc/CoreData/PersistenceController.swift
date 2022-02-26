@@ -18,7 +18,6 @@ class PersistenceController: ObservableObject {
         
         persistentStoreContainer = NSPersistentContainer(name: "CalculatorModel")
 
-        
         persistentStoreContainer.loadPersistentStores{ description, error in
             if error != nil {
                 fatalError("There has been an error with CoreData")
