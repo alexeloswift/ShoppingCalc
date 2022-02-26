@@ -9,6 +9,22 @@ import SwiftUI
 
 class CalculatorViewModel: ObservableObject {
     
+    @Environment(\.managedObjectContext) var moc
+    
+    @FetchRequest(entity: Item.entity(), sortDescriptors: [ NSSortDescriptor(keyPath: \Item.priceAfterDiscount, ascending: true) ])
+    var items: FetchedResults<Item>
+    
+    let viewContext = PersistenceController.sharedPersistenceController.persistentStoreContainer.viewContext
+
+    
+//    private (set) var context: NSManagedObjectContext
+//    
+//    init(context: NSManagedObjectContext) {
+//        self.context = context
+//    }
+
+
+    
     //    Input
     @Published var discountPercentage: Int = 50
     @Published var price: String = "0.00"
@@ -68,5 +84,16 @@ class CalculatorViewModel: ObservableObject {
         priceAfterDiscount = 0.0
         priceAfterDiscountWithTax = 0.0
         taxesAmountAfterDiscount = 0.0
+    }
+    
+    func save(completion: @escaping (Error?) -> () = {_ in}) {
+        if viewContext.hasChanges {
+            do {
+                try viewContext.save()
+                completion(nil)
+            } catch {
+                completion(error)
+            }
+        }
     }
 }

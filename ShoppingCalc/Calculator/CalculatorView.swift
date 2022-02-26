@@ -9,18 +9,17 @@ import SwiftUI
 
 struct CalculatorView: View {
     
-    let discountPercentages = 0..<101
+    @Environment(\.managedObjectContext) var viewContext
     
     
     @ObservedObject private var viewmodel = CalculatorViewModel()
+    
+    let discountPercentages = 0..<101
     
     var body: some View {
         
         NavigationView {
             ZStack {
-                LinearGradient(colors: [Color.pink, Color.indigo], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .ignoresSafeArea()
-                
                 GeometryReader { geo in
                     ScrollView {
                         VStack {
@@ -60,7 +59,9 @@ struct CalculatorView: View {
                                     Picker("Discount Percentage", selection: $viewmodel.discountPercentage) {
                                         ForEach(discountPercentages) {
                                             Text("\($0) %")
+                                            
                                         }}
+                                    
                                 }
                                 .modifier(SmallViewsMod())
                                 VStack{
@@ -85,6 +86,7 @@ struct CalculatorView: View {
                                     .font(.system(.body, design: .monospaced))
                                     .font(.title3)
                                     .padding(3)
+                                    .modifier(AccentIcons())
                                     .foregroundColor(.primary)
                                     .padding(10)
                                     .overlay(
@@ -95,18 +97,60 @@ struct CalculatorView: View {
                                     .font(.system(.body, design: .monospaced))
                                     .font(.title3)
                                     .padding(3)
+                                    .modifier(AccentIcons())
                                     .foregroundColor(.primary)
                                     .padding(10)
                                     .overlay(
                                         Capsule()
                                             .stroke(Color(UIColor.systemGray4), lineWidth: 3))
                             }
+                            
+                            Button("Save") {
+                                
+                                let newItem = Item(context: self.viewmodel.moc)
+                                
+                                newItem.price = self.viewmodel.price
+                                newItem.priceAfterDiscountWithTax = self.viewmodel.priceAfterDiscountWithTax
+                                newItem.priceAfterDiscount = self.viewmodel.priceAfterDiscount
+                                newItem.discountPercentage = Double(self.viewmodel.discountPercentage)
+                                newItem.taxPercentage = self.viewmodel.taxPercentage
+                                newItem.taxesAmountAfterDiscount = self.viewmodel.taxesAmountAfterDiscount
+                                
+                                try? self.viewmodel.moc.save()
+                                
+                                
+                                print(newItem.priceAfterDiscount)
+                                print(newItem.priceAfterDiscountWithTax)
+                                
+                            }
                         }
                     }
                 }
-                .navigationTitle("ShoppingCalc")
-                .padding(.top, 50)
+                
+                .navigationBarTitle("ShoppingCalc")
+                
+                
+                .navigationBarItems(leading: Button(action: {
+                    
+                    // ADD BUTTON FUNCTIONALITY
+                    
+                }, label: {
+                    Image(systemName: "sidebar.leading").modifier(AccentIcons())
+                    
+                    
+                }), trailing: Button(action: {
+                    
+                    // ADD BUTTON FUNCTIONALITY
+                    
+                }, label: {
+                    Image(systemName: "plus.circle").modifier(AccentIcons())
+                }))
+                
+                
+                
+                
                 .navigationBarTitleDisplayMode(.inline)
+                
                 .toolbar {
                     ToolbarItem(placement: .keyboard) {
                         

@@ -10,9 +10,14 @@ import SwiftUI
 @main
 struct ShoppingCalcApp: App {
     
+    
     var body: some Scene {
         WindowGroup {
+            
+            let viewContext = PersistenceController.sharedPersistenceController.persistentStoreContainer.viewContext
+            
             MainView()
+                .environment(\.managedObjectContext, viewContext)
                 
         }
     }

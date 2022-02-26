@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "108DA725-4D5F-4C0E-B67F-A30ACBA90895"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Testing/ShoppingCalcTests/ShoppingCalcUITests/ShoppingCalcUITests.swift"
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "71E9D6BC-49DA-4453-AF7D-D08159DCB596"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Testing/ShoppingCalcTests/ShoppingCalcUITests/ShoppingCalcUITestsLaunchTests.swift"
@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2A95D096-5258-4DB6-BAFF-E284BB280FE7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Testing/ShoppingCalcTests/ShoppingCalcUITests/ShoppingCalcTests.swift"

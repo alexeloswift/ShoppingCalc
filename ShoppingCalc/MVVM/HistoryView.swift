@@ -1,20 +1,24 @@
 //
-//  ListView.swift
+//  HistoryView.swift
 //  ShoppingCalc
 //
-//  Created by Alexis Diaz on 2/15/22.
+//  Created by Alexis Diaz on 2/20/22.
 //
 
 import SwiftUI
 
-struct ListView: View {
+struct HistoryView: View {
+    
+    
+
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ListView_Previews: PreviewProvider {
+struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView()
+        HistoryView()
     }
 }

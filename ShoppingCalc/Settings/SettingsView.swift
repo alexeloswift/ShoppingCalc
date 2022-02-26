@@ -7,16 +7,40 @@
 
 import SwiftUI
 
-struct SettingsView: View {
-    var body: some View {
-        NavigationView {
-            Form {
-                
-            }
-            .navigationTitle("Settings")
+struct SettingRowView : View {
+    var title : String
+    var systemImageName : String
+    
+    var body : some View {
+        HStack (spacing : 15) {
+            Image(systemName: systemImageName)
+            Text (title)
         }
     }
 }
+
+struct SettingsView: View {
+    
+
+    
+    var body: some View {
+        
+        NavigationView {
+            Form {
+             
+            }
+            .navigationTitle("Settings")
+         
+          
+
+        }
+            
+
+        
+
+    }
+}
+    
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
