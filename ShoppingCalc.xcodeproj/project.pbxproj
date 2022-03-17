@@ -52,18 +52,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		FDB6D78427B0DE8300A16A87 /* MVVM */ = {
-			isa = PBXGroup;
-			children = (
-				FDB6D78927B0DEEE00A16A87 /* CalculatorView.swift */,
-				FDB6D78B27B0E0AC00A16A87 /* CalculatorViewModel.swift */,
-				FD20196E27BB6A7D00B2D693 /* MainView.swift */,
-				FDC0CF2D279E5CE40067B276 /* ViewModifiers */,
-				FD20197227BB728900B2D693 /* Extensions */,
-			);
-			path = MVVM;
-			sourceTree = "<group>";
-		};
 		FDC0CF2D279E5CE40067B276 /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +83,11 @@
 			isa = PBXGroup;
 			children = (
 				FDE73DE02795353700386DD4 /* ShoppingCalcApp.swift */,
-				FDB6D78427B0DE8300A16A87 /* MVVM */,
+				FD20196E27BB6A7D00B2D693 /* MainView.swift */,
+				FDB6D78927B0DEEE00A16A87 /* CalculatorView.swift */,
+				FDB6D78B27B0E0AC00A16A87 /* CalculatorViewModel.swift */,
+				FDC0CF2D279E5CE40067B276 /* ViewModifiers */,
+				FD20197227BB728900B2D693 /* Extensions */,
 				FDE73DE42795353800386DD4 /* Assets.xcassets */,
 			);
 			path = ShoppingCalc;
