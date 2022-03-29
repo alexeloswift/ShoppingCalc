@@ -11,7 +11,7 @@ struct CalculatorView: View {
     
     let discountPercentages = 0..<101
     
-    @ObservedObject private var viewmodel = CalculatorViewModel()
+    @EnvironmentObject private var viewmodel: CalculatorViewModel
     
     var body: some View {
         
@@ -49,7 +49,7 @@ struct CalculatorView: View {
                     
                     HStack {
                         Picker("Discount Percentage", selection: $viewmodel.discountPercentage) {
-                            ForEach(discountPercentages) {
+                            ForEach(discountPercentages, id: \.self) {
                                 Text("\($0)")
                             }}
                         .modifier(SmallViewsMod())
@@ -115,5 +115,6 @@ struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         CalculatorView()
             .preferredColorScheme(.dark)
+            .environmentObject(CalculatorViewModel())
     }
 }
